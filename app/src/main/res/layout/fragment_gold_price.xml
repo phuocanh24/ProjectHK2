@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="56dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- tiêu đề -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BẢNG GIÁ VÀNG HÔM NAY"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- cuộn ngang -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <!-- header -->
+                <TableRow android:background="#D4AF37">
+                    <TextView android:text="Loại vàng" android:textStyle="bold" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="Tuổi vàng" android:textStyle="bold" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="Độ tinh khiết" android:textStyle="bold" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="Mua vào" android:textStyle="bold" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="Bán ra" android:textStyle="bold" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="Cập nhật" android:textStyle="bold" android:padding="8dp" android:background="@drawable/table_border"/>
+                </TableRow>
+
+                <!-- dòng 1 -->
+                <TableRow>
+                    <TextView android:text="Nhẫn tròn trơn" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="24k" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="999.9%" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="14.800.000đ" android:textColor="#00AA00" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="15.100.000đ" android:textColor="#FF0000" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="21:30" android:padding="8dp" android:background="@drawable/table_border"/>
+                </TableRow>
+
+                <!-- dòng 2 -->
+                <TableRow>
+                    <TextView android:text="Quà mừng bản vị vàng" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="24k" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="999.9%" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="14.800.000đ" android:textColor="#00AA00" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="15.100.000đ" android:textColor="#FF0000" android:padding="8dp" android:background="@drawable/table_border"/>
+                    <TextView android:text="21:30" android:padding="8dp" android:background="@drawable/table_border"/>
+                </TableRow>
+
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <!-- Banner đầu tư -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E1E1E"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đầu tư thông minh"
+                android:textColor="#D4AF37"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tích lũy vàng SJC chỉ từ 0.1 lượng"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="5dp"/>
+
+            <Button
+                android:id="@+id/btnMuaNgay"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:text="MUA NGAY"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#D4AF37"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner"/>
+
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_heart_outline"
+                android:contentDescription="favorite"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtCollection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ETOILE SERIES"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solitaire Diamond Ring"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$2,450.00"
+            android:textColor="#D4AF37"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

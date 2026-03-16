@@ -1,140 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
-        android:padding="16dp"
+    <!-- MAIN CONTENT -->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="#F6F6F6">
 
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@android:drawable/ic_media_previous"
-            android:background="@android:color/transparent"
-            android:contentDescription="Back"
-            app:tint="#000000"/>
+        <!-- Fragment Container - đặt lên trước, chiếm full -->
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNav"/>
 
-        <TextView
-            android:text="BẢNG GIÁ VÀNG HÔM NAY"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:gravity="center"
+        <!-- Toolbar - đặt đè lên trên fragment -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"/>
+            android:background="#FFFFFF"
+            android:minHeight="70dp"
+            app:menu="@menu/menu_bottom">
 
-        <TextView
-            android:text="Cập nhật lúc: 21:30 11/11/2025"
-            android:background="#DDDDDD"
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <!-- Cuộn ngang -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TableLayout
+            <TextView
+                android:id="@+id/txtToolbarTitle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="serif"
+                android:letterSpacing="0.15"
+                android:text="LUMIÈRE"
+                android:textColor="#C6A646"
+                android:textSize="22sp" />
 
-                <!-- Header -->
-                <TableRow android:background="#F4A742">
+        </com.google.android.material.appbar.MaterialToolbar>
 
-                    <TextView
-                        android:text="Loại vàng"
-                        android:textStyle="bold"
-                        android:padding="10dp"
-                        android:minWidth="150dp"/>
+        <!-- Bottom Navigation -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#FFFFFF"
+            app:itemIconTint="@color/bottom_nav_color"
+            app:itemTextColor="@color/bottom_nav_color"
+            app:itemIconSize="26dp"
+            app:menu="@menu/menu_bottom"/>
 
-                    <TextView
-                        android:text="Tuổi vàng"
-                        android:textStyle="bold"
-                        android:padding="10dp"
-                        android:minWidth="80dp"/>
+    </RelativeLayout>
 
-                    <TextView
-                        android:text="Độ tinh khiết"
-                        android:textStyle="bold"
-                        android:padding="10dp"
-                        android:minWidth="100dp"/>
+    <!-- DRAWER MENU -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:menu="@menu/drawer_menu"/>
 
-                    <TextView
-                        android:text="Mua vào"
-                        android:textStyle="bold"
-                        android:padding="10dp"
-                        android:minWidth="100dp"/>
-
-                    <TextView
-                        android:text="Bán ra"
-                        android:textStyle="bold"
-                        android:padding="10dp"
-                        android:minWidth="100dp"/>
-
-                </TableRow>
-
-                <!-- Row 1 -->
-                <TableRow>
-
-                    <TextView
-                        android:text="NHẪN TRÒN TRƠN"
-                        android:padding="10dp"
-                        android:minWidth="150dp"/>
-
-                    <TextView
-                        android:text="24K"
-                        android:padding="10dp"/>
-
-                    <TextView
-                        android:text="999.9%"
-                        android:padding="10dp"/>
-
-                    <TextView
-                        android:text="14.800.000đ"
-                        android:padding="10dp"/>
-
-                    <TextView
-                        android:text="15.100.000đ"
-                        android:padding="10dp"/>
-
-                </TableRow>
-
-                <!-- Row 2 -->
-                <TableRow>
-
-                    <TextView
-                        android:text="QUÀ MỪNG BẢN VỊ VÀNG"
-                        android:padding="10dp"
-                        android:minWidth="150dp"/>
-
-                    <TextView
-                        android:text="24K"
-                        android:padding="10dp"/>
-
-                    <TextView
-                        android:text="999.9%"
-                        android:padding="10dp"/>
-
-                    <TextView
-                        android:text="14.800.000đ"
-                        android:padding="10dp"/>
-
-                    <TextView
-                        android:text="15.100.000đ"
-                        android:padding="10dp"/>
-
-                </TableRow>
-
-            </TableLayout>
-
-        </HorizontalScrollView>
-
-    </LinearLayout>
-
-</ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

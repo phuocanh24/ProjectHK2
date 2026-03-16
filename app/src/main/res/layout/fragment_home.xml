@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Banner -->
+        <androidx.cardview.widget.CardView
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:cardCornerRadius="20dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banner"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom|start"
+                    android:padding="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="NEW ARRIVALS"
+                        android:textColor="#E5C25A"
+                        android:textSize="12sp"
+                        android:fontFamily="serif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="The Aurelian Collection"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:text="Shop Now"
+                        android:backgroundTint="#D4AF37"
+                        android:textColor="#000"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Categories Title + All Collections -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:text="Categories"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtAllCollections"
+                android:text="All Collections"
+                android:textSize="14sp"
+                android:textColor="#C9A227"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:nestedScrollingEnabled="false"/>
+
+
+        <!-- Featured Products -->
+        <TextView
+            android:text="Featured Products"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:fontFamily="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginBottom="20dp"
+            android:nestedScrollingEnabled="true"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

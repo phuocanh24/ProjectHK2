@@ -35,6 +35,11 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    // ← THÊM VÀO ĐÂY
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -46,4 +51,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }

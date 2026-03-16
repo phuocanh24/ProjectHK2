@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Thân xe tải (phần hàng hóa) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#222222"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M1,6h14v11H1z" />
+
+    <!-- Cabin xe tải -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#222222"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M15,9h4l3,3v5h-7V9z" />
+
+    <!-- Bánh xe trái -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#222222"
+        android:strokeWidth="1.6"
+        android:pathData="M5,17m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+
+    <!-- Bánh xe phải -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#222222"
+        android:strokeWidth="1.6"
+        android:pathData="M19,17m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+
+    <!-- Đường nối đáy xe -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#222222"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:pathData="M1,17h2M7,17h8M17,17h2" />
+
+</vector>
